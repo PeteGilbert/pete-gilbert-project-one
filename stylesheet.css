@@ -463,6 +463,9 @@ footer {
         padding: 0;
     }
 
+    footer p {
+        line-height: 6vw;
+    }
     /* FONT FOR FOOTER NAV DOES NOT MATCH STYLE SHEET IN .PNG WOULD CONFIRM WITH DESIGNER WHAT DESIRED FONT IS */
     .footer-left li {
         display: inline-block;
