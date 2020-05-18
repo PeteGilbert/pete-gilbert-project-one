@@ -34,6 +34,7 @@ h1 {
     font-family: 'Italiana', serif;
     text-align: right;
     color: white;
+    text-transform: uppercase;
 }
 
 h2 {
@@ -87,6 +88,7 @@ nav li {
 footer nav li {
     font-family: 'Italiana', sans-serif;
     color: white;
+    text-transform: uppercase;
 }
 
 p{
@@ -128,6 +130,9 @@ ul {
 .title-pos {
     float: left;
     margin-left: 20%;
+    position: absolute;
+    left: -10%;
+    top: 20%;
 }
 
 h1 {
@@ -155,6 +160,15 @@ header i {
     width: 20px;
 }
 
+.mobile-menu {
+    float: right;
+    position: absolute;
+    font-size: 8rem;
+    top: 20px;
+    right: 20px;
+    visibility: hidden;
+}
+
 /* First (Hand Crafted) section styling */
 
 .hand-crafted-sect {
@@ -163,11 +177,9 @@ header i {
     padding: 100px;
 }
 
-/* WHAT SHOULD TEXT DO IN BETWEEN BREAKPOINTS??? */
-
 .hand-crafted-img {
     float: left;
-    height: 300px;
+    height: 325px;
     margin-right: 25px;
 
 }
@@ -186,9 +198,9 @@ header i {
     padding: 75px;
 }
 
-.latest-image-div img {
+/* .latest-image-div img {
     width: 30%;
-}
+} */
 
 .latest-image-div {
     position: relative;
@@ -196,16 +208,19 @@ header i {
 
 .latest-image-left {
     float: left;
+    width: 30%;
 }
 
 .latest-image-center {
     position: absolute;
     left: 35%;
     float: left;
+    width: 30%;
 }
 
 .latest-image-right {
-    float: right
+    float: right;
+    width: 30%;
 }
 
 
@@ -254,17 +269,16 @@ header i {
 .left-half {
     float: left;
     width: 50%;
-    position: relative;
 }
+
 
 .right-half {
     float: right;
     width: 50%;
-    position: relative;
 }
 
 .blog-text {
-    padding: 5% 10% 0 10%;
+    padding: 10% 0% 10% 5%;
 }
 
 /* Footer Styling */
@@ -288,4 +302,203 @@ footer {
 .footer-right {
     float: right;
     text-align: right;
+}
+
+.enter-email {
+    font-size : 2.3rem;
+    
+}
+
+::placeholder {
+    color: black;
+}
+
+.subscribe {
+    border: none;
+    background-color: black;
+    position: relative;
+    /* Moving button slightly left to touch input box */
+    left: -6px;
+
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    margin: 0;
+    /* position: absolute;
+    bottom: 0; */
+}
+
+
+@media (max-width: 1310px) {
+
+    .hand-crafted-img {
+        width: 100%;
+        height: auto;
+        float: none;
+    }
+
+    /* Design is not text-align center but it looks much better this way. The title in the source image is between left and center aligned. would confirm this with designer. */
+    .hand-crafted-sect {
+        text-align: center;
+    }
+
+    .hand-crafted-sect h2 {
+        padding-top: 100px;
+    }
+
+    .left-half,
+    .right-half {
+        float: none;
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .footer-center {
+        left: 27%;
+    }
+}
+
+@media (max-width: 1000px)  {
+
+
+    /* Header for mobile */
+    header {
+        background-image: url(./Assets/header-1.jpg);
+    }
+
+    header nav {
+        visibility: hidden;
+    }
+
+    .mobile-menu {
+        visibility: visible;
+    }
+
+    /* Would confirm this logo scaling with designer */
+    h1 {
+        font-size: 15vw;
+        line-height: 10vw;
+    }
+
+    h3 {
+        font-size: 5vw;
+    }
+
+    .title-pos {
+        position: absolute;
+        left: -15%;
+        top: 30%;
+    }
+
+    /* hand-crafted for mobile */
+
+    .hand-crafted-sect {
+        padding: 50px 0 50px 0;
+    }
+    
+    .hand-crafted-sect h2 {
+        padding-top: 50px;
+    }
+
+    /* Latest image for mobile */
+
+    .latest-collection-sect {
+        padding-bottom: 50px;
+    }
+
+    .latest-collection-sect h2 {
+        padding: 50px 0 50px 0;
+    }
+
+    .latest-image-left {
+        width: 49%
+    }
+
+    .latest-image-center {
+        float: right;
+        width: 49%;
+        position: static;
+    }
+
+    .latest-image-right {
+        height: 0px;
+    }
+
+    /* Icons for mobile */
+
+    .icon-left,
+    .icon-center,
+    .icon-right {
+        width: 100%;
+        float: none;
+        text-align: center;
+        position: static;
+        margin-bottom: 50px;
+    }
+
+    .icons-sect i {
+        font-size: 15vw;
+    }
+    
+    h4 {
+        font-size: 8vw;
+    }
+
+    /* footer for mobile */
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        float: none;
+        width: 100%;
+        position: static;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .footer-left ul {
+        padding: 0;
+    }
+
+    /* FONT FOR FOOTER NAV DOES NOT MATCH STYLE SHEET IN .PNG WOULD CONFIRM WITH DESIGNER WHAT DESIRED FONT IS */
+    .footer-left li {
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 5vw;
+    }
+
+    .enter-email {
+        font-size : 8.3vw;
+        max-width: 100%;
+    }
+
+    ::placeholder {
+        text-align: center;
+        font-size: 7vw;
+    }
+
+    .subscribe {
+        border: none;
+        background-color: black;
+        font-size: 8.3vw;
+        width: 100%;
+        position: static;
+    }
+
+    footer h5 {
+        font-size: 6vw;
+    }
+
+    footer p {
+        font-size: 5vw;
+        margin-bottom: 0;
+    }
+
+    .footer-right {
+        margin-bottom: 0;
+    }
 }
